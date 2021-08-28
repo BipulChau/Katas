@@ -1,0 +1,18 @@
+input{
+  display: flex-row;
+  padding: 5px;
+}
+
+body{
+  /* display: flex;
+  height: auto; */
+}
+
+button{
+  margin: 5px;
+  height: 40px;
+  display: flex-column;
+  background: #f3f3f3;
+  color: black;
+  border-radius: 5px;
+}

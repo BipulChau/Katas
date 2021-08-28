@@ -44,6 +44,7 @@ const calculateChange = (total, cash) => {
   return changeDetails;
 };
 
+<<<<<<< Updated upstream
 const ans = calculateChange(1787, 2000);
 const dens = Object.keys(ans);
 dens.forEach((d) => {
@@ -53,3 +54,34 @@ dens.forEach((d) => {
 });
 
 console.log(ans);
+=======
+window.onload = () => {
+  const button = document.getElementById("calculate");
+  const dateToday = document.getElementById("today");
+  dateToday.innerHTML = new Date().toString()
+  console.log(button);
+  button.onclick = () => {
+    n = 0;
+    console.log("Calculating");
+    const total = document.getElementById("total").value;
+    const cash = document.getElementById("cash").value;
+    const answer = document.getElementById("answer");
+    console.log(total, cash);
+    answer.innerHTML = "";
+    const change = cash - total;
+    const ans = calculateChange(change);
+    const dens = Object.keys(ans);
+    dens.forEach((d) => {
+      if (ans[d] <= 0) {
+        delete ans[d];
+      }
+      if (ans[d] > 0) {
+        answer.innerHTML += `${d} : ${ans[d]}<br>`;
+      }
+    });
+    answer.innerHTML += `Total return: ${change / 100}`;
+    console.log(total, cash, change, ans);
+    console.log(n);
+  };
+};
+>>>>>>> Stashed changes
